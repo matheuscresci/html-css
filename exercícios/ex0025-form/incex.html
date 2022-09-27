@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+<!--Existem 2 métodos que são metodos simples para envio de formulario.
+  O primeiro método é o padrão (method="GET") (quando a gente não coloca nada)
+Por padrão se eu não coloco nada.
+O method="POST" não aparece na URL mas é possivel de encontrar pelo inspecionar-network. 
+
+Em que momento eu uso GET e em que momento eu uso POST
+GET: Quando os dados não forem sensíveis (url de result da busca no google)
+Quando se envia dados por GET, só pode enviar até 3000 Bytes (3000 letras)
+GET OU POST não tem alteração em velocidade de resposta
+
+POST: Para conteúdos sensíveis (senhas, fotos, dados bancários etc..)-->
+
+
+     <h1>Meu primeiro formulário</h1>
+     <form action="cadastro.php" autocomplete="off">
+      <p><label for="inome">Nome:</label> <!--Sempre faça uso de Label (para relacionar formularios e etiquetas) para que assim aumente a area de toque na caixa-->
+        <input type="text" name="nome" id="inome"></p> <!--name (mais utilizado para html e php) id (mais utilizado para javascript e label)-->
+      <p><label for="isobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" id="isobrenome"></p>
+      <p><input type="submit" value="Enviar"></p> 
+     </form>
+  
+</body>
+</html>
