@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!--Existem dois métodos (simples) pra envio de formulários.
+    Quando não colocamos método nenhum, o método padrão é o GET. Ele mostra os dados no URL, ja o POST evita isso, trazendo uma simples segurança.
+    SE VOCE QUISER O LINK URL SEJA COMPARTILHAVEL, AI SE USA GET
+    pra usar o GET tem um limite de 3000 Letras.
+    Envio de fotos e senhas não é bom GET
+    POST = Dados Sensíveis, esconder url, +3k bits, envio de arquivos
+  -->
+  <h1>Meu primeiro formulário</h1>
+  <form action="cadastro.php" method="post" autocomplete="off"> <!--Para desligar o preenchimento automático--> <!--Formulários precisam de um local para enviar, nesse caso usamos actions cadastro php-->
+    <p><label for="inome">Nome:</label> <!--Nesse for coloca o id-->
+      <input type="text" name="nome" id="inome"></p> <!--name = mais util para HTML e PHP id = mais util para JS e Label -->
+    <p><label for="isobrenome">Sobrenome:</label> <!--Não fazer uso das labels dificulta os mecanismos de busca de priorizar seu site-->
+      <!--Quando se cria uma label, tambem se cria uma área maior de sensibilidade-->
+      <input type="text" name="sobrenome" id="isobrenome"></p>
+    <p><input type="submit" value="Enviar"></p>
+  </form>
+</body>
+</html>
