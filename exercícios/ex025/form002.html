@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Teste de Formulário</h1>
+  <form action="cadastro.php" autocomplete="on" method="post">
+    <p>
+      <label for="iusu">Usuário: </label>
+      <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="Nome do Usuário" autocomplete="username"> <!--Aqui foi uma caixa do tipo texto, required pra ser obrigatório, min e max length pra ter um numero minimo e maximo de caracteres, com size 10 significa que vai aparecer a caixa para mostrar 10 caracteres-->
+    </p>
+
+    <p>
+      <label for="isen">Senha: </label>
+      <input type="password" name="sen" id="isen" required minlength="8" size="8" placeholder="3 Tentativas" autocomplete="current-password">
+    </p>
+
+    <p>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </p>
+  </form>
+</body>
+
+</html>
